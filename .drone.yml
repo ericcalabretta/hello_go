@@ -11,7 +11,7 @@ steps:
 - name: docker  
   image: plugins/docker
   settings:
-    tags: ${DRONE_COMMIT}
+    tags: ${DRONE_BUILD_NUMBER}-${DRONE_COMMIT_SHA:0:8}
     repo: cavs2016/hello_go
     username:
       from_secret: docker_un
