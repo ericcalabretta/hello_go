@@ -12,6 +12,9 @@ steps:
 - name: docker  
   image: plugins/docker
   settings:
-    username: kevinbacon
-    password: pa55word
-    repo: foo/bar
+    username:
+      from_secret: docker_un
+    password:
+      from_secret: docker_pw
+    repo: cavs2016/hello_go
+   
