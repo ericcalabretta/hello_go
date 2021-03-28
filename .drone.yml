@@ -7,7 +7,6 @@ steps:
   commands:
   - go test
   - go build
-  - echo -n "5.2.6,5.2.4" > .tags
   
 - name: docker  
   image: plugins/docker
@@ -17,4 +16,5 @@ steps:
     password:
       from_secret: docker_pw
     repo: cavs2016/hello_go
+    auto_tag: true
    
