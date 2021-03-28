@@ -16,5 +16,6 @@ steps:
     password:
       from_secret: docker_pw
     repo: cavs2016/hello_go
-    auto_tag: true
+    tags:
+      - ${DRONE_BUILD_NUMBER}-${DRONE_COMMIT_REF}
    
